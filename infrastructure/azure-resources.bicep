@@ -1,9 +1,10 @@
 // Parameters
-@description('Primary location for the Azure resources.')
-param location string = resourceGroup().location
-@description('Secondary location for failover.')
+//@description('Primary location for the Azure resources.')
+param location string = 'westus'
+//param location string = resourceGroup().location
+//@description('Secondary location for failover.')
 param locationSecondary string = 'eastus2'
-@description('Name for the primary Azure Cosmos DB account.')
+//@description('Name for the primary Azure Cosmos DB account.')
 param cosmosDbAccountName string = 'twoRegionCosmosDb'
 param cosmosDbPrimaryRegionName string = 'twoRegionCosmosDbPrimary'
 param appServicePlanName string = 'twoRegionAppServicePlan'
@@ -17,9 +18,9 @@ param queueStoragePrimaryName string = 'twoRegionQueuePrimary'
 param queueStorageSecondaryName string = 'twoRegionQueueSecondary'
 param appInsightsName string = 'twoRegionAppInsights'
 param frontDoorName string = 'twoRegionFrontDoor'
-@description('Name for the primary Storage account.')
+//@description('Name for the primary Storage account.')
 param storageAccountPrimaryName string = 'tworegionstorageprimary'
-@description('Name for the secondary Storage account.')
+//@description('Name for the secondary Storage account.')
 param storageAccountSecondaryName string = 'tworegionstoragesecondary'
 
 // Azure Cosmos DB Account
